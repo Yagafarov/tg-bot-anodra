@@ -1,34 +1,38 @@
-Package           Version
------------------ ---------
-aiodns            3.5.0
-aiofiles          24.1.0
-aiogram           3.21.0
-aiohttp           3.9.5
-aiosignal         1.4.0
-annotated-types   0.7.0
-async-timeout     4.0.3
-attrs             25.3.0
-babel             2.17.0
-Brotli            1.1.0
-certifi           2025.7.14
-cffi              1.17.1
-colorama          0.4.6
-fluent.runtime    0.4.0
-fluent.syntax     0.19.0
-frozenlist        1.7.0
-idna              3.10
-magic-filter      1.0.12
-multidict         6.6.3
-pip               21.2.3
-propcache         0.3.2
-pycares           4.9.0
-pycparser         2.22
-pydantic          2.11.7
-pydantic_core     2.33.2
-pytz              2025.2
-setuptools        57.4.0
-structlog         25.4.0
-typing_extensions 4.14.1
-typing-inspection 0.4.1
-ujson             5.10.0
-yarl              1.20.1
+# Install aiogram on steroids by default
+aiogram
+# uvloop  # windows not supported (uncomment if you are on Linux)
+ujson
+aiohttp[speedups]
+#aiohttp[speedups]==3.9.5 # for windows use this instead
+aiodns
+
+# Or choose manually what to install ...
+# aiogram  # general aiogram
+# uvloop  # fast, drop-in replacement of the built-in asyncio event loop
+# ujson  # ultra fast JSON encoder and decoder written in pure C
+# cchardet # (aiohttp speedup) high speed universal character encoding detector
+# aiodns # (aiohttp speedup) provides a simple way for doing asynchronous DNS resolutions
+
+# Other packages
+structlog
+pydantic
+fluent.runtime
+fluent.syntax
+colorama
+
+###############################################################
+###     Some useful async libraries to use with aiogram     ###
+### for more: https://github.com/timofurrer/awesome-asyncio ###
+##############################################################
+
+# aiosqlite  # Async work with SQLite
+# asyncpg  # Async work with PostgreSQL
+# motor  # Async work with MongoDB
+# pyzmq  # Async work with ZeroMQ
+# piccolo  # Async ORM
+# aql  # Async query builder (beta)
+# httpx  # Async http client
+# aiofiles  # Async work with files
+# aioamqp  # Async work with AMQP
+# aiocache  # Async work with cache system
+# aiopath  # Async pathlib
